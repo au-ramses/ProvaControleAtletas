@@ -3,7 +3,6 @@
  * and open the template in the editor.
  */
 package model;
-import model.HockeyPlayer;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -27,350 +26,94 @@ public class HockeyPlayerTest {
         novoHockeyPlayer = new HockeyPlayer("Ana");	
     }
     
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    /**
-     * Test of getPosition method, of class HockeyPlayer.
-     */
     @Test
     public void testGetPosition() {
-        System.out.println("getPosition");
-        String expResult = null;
-        String result = novoHockeyPlayer.getPosition();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setPosition("Goleiro");
+        assertEquals("Goleiro", novoHockeyPlayer.getPosition());
     }
 
-    /**
-     * Test of setPosition method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetPosition() {
-        System.out.println("setPosition");
-        String position = "null";
-        novoHockeyPlayer.setPosition(position);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getAcceleration method, of class HockeyPlayer.
-     */
     @Test
     public void testGetAcceleration() {
-        System.out.println("getAcceleration");
-        Double expResult = 0.00;
-        Double result = novoHockeyPlayer.getAcceleration();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setAcceleration(0.01);
+        assertEquals(0.01, novoHockeyPlayer.getAcceleration(),0.01);
     }
 
-    /**
-     * Test of setAcceleration method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetAcceleration() {
-        System.out.println("setAcceleration");
-        Double acceleration = 0.00;
-        novoHockeyPlayer.setAcceleration(acceleration);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getAggressiveness method, of class HockeyPlayer.
-     */
     @Test
     public void testGetAggressiveness() {
-        System.out.println("getAggressiveness");
-        String expResult = null;
-        String result = novoHockeyPlayer.getAggressiveness();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setAggressiveness("alta");
+        assertEquals("alta", novoHockeyPlayer.getAggressiveness());
     }
 
-    /**
-     * Test of setAggressiveness method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetAggressiveness() {
-        System.out.println("setAggressiveness");
-        String aggressiveness = "null";
-        novoHockeyPlayer.setAggressiveness(aggressiveness);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getAgility method, of class HockeyPlayer.
-     */
     @Test
     public void testGetAgility() {
-        System.out.println("getAgility");
-        String expResult = null;
-        String result = novoHockeyPlayer.getAgility();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setAgility("alta");
+        assertEquals("alta", novoHockeyPlayer.getAgility());
     }
 
-    /**
-     * Test of setAgility method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetAgility() {
-        System.out.println("setAgility");
-        String agility = "null";
-        novoHockeyPlayer.setAgility(agility);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getBalance method, of class HockeyPlayer.
-     */
     @Test
     public void testGetBalance() {
-        System.out.println("getBalance");
-        String expResult = null;
-        String result = novoHockeyPlayer.getBalance();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setBalance("bom");
+        assertEquals("bom", novoHockeyPlayer.getBalance());
     }
 
-    /**
-     * Test of setBalance method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetBalance() {
-        System.out.println("setBalance");
-        String balance = "null";
-        novoHockeyPlayer.setBalance(balance);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getBodyChecking method, of class HockeyPlayer.
-     */
     @Test
     public void testGetBodyChecking() {
-        System.out.println("getBodyChecking");
-        String expResult = null;
-        String result = novoHockeyPlayer.getBodyChecking();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setBodyChecking("bom");
+        assertEquals("bom", novoHockeyPlayer.getBodyChecking());
     }
 
-    /**
-     * Test of setBodyChecking method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetBodyChecking() {
-        System.out.println("setBodyChecking");
-        String bodyChecking = "null";
-        novoHockeyPlayer.setBodyChecking(bodyChecking);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getDefenseAwareness method, of class HockeyPlayer.
-     */
     @Test
     public void testGetDefenseAwareness() {
-        System.out.println("getDefenseAwareness");
-        String expResult = null;
-        String result = novoHockeyPlayer.getDefenseAwareness();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setDefenseAwareness("bom");
+        assertEquals("bom", novoHockeyPlayer.getDefenseAwareness());
     }
 
-    /**
-     * Test of setDefenseAwareness method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetDefenseAwareness() {
-        System.out.println("setDefenseAwareness");
-        String defenseAwareness = "";
-        novoHockeyPlayer.setDefenseAwareness(defenseAwareness);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getDeking method, of class HockeyPlayer.
-     */
     @Test
     public void testGetDeking() {
-        System.out.println("getDeking");
-        String expResult = null;
-        String result = novoHockeyPlayer.getDeking();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setDeking("bom");
+        assertEquals("bom", novoHockeyPlayer.getDeking());
     }
 
-    /**
-     * Test of setDeking method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetDeking() {
-        System.out.println("setDeking");
-        String deking = "null";
-        novoHockeyPlayer.setDeking(deking);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getEndurance method, of class HockeyPlayer.
-     */
     @Test
     public void testGetEndurance() {
-        System.out.println("getEndurance");
-        String expResult = null;
-        String result = novoHockeyPlayer.getEndurance();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setEndurance("alta");
+        assertEquals("alta", novoHockeyPlayer.getEndurance());
     }
 
-    /**
-     * Test of setEndurance method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetEndurance() {
-        System.out.println("setEndurance");
-        String endurance = "null";
-        novoHockeyPlayer.setEndurance(endurance);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getFaceOffs method, of class HockeyPlayer.
-     */
     @Test
     public void testGetFaceOffs() {
-        System.out.println("getFaceOffs");
-        String expResult = null;
-        String result = novoHockeyPlayer.getFaceOffs();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setFaceOffs("bom");
+        assertEquals("bom", novoHockeyPlayer.getFaceOffs());
     }
 
-    /**
-     * Test of setFaceOffs method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetFaceOffs() {
-        System.out.println("setFaceOffs");
-        String faceOffs = "null";
-        novoHockeyPlayer.setFaceOffs(faceOffs);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getHandEye method, of class HockeyPlayer.
-     */
     @Test
     public void testGetHandEye() {
-        System.out.println("getHandEye");
-        String expResult = null;
-        String result = novoHockeyPlayer.getHandEye();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setHandEye("bom");
+        assertEquals("bom", novoHockeyPlayer.getHandEye());
     }
 
-    /**
-     * Test of setHandEye method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetHandEye() {
-        System.out.println("setHandEye");
-        String handEye = "null";
-        novoHockeyPlayer.setHandEye(handEye);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getOffenseAwareness method, of class HockeyPlayer.
-     */
     @Test
     public void testGetOffenseAwareness() {
-        System.out.println("getOffenseAwareness");
-        String expResult = null;
-        String result = novoHockeyPlayer.getOffenseAwareness();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setOffenseAwareness("bom");
+        assertEquals("bom", novoHockeyPlayer.getOffenseAwareness());
     }
 
-    /**
-     * Test of setOffenseAwareness method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetOffenseAwareness() {
-        System.out.println("setOffenseAwareness");
-        String offenseAwareness = "null";
-        novoHockeyPlayer.setOffenseAwareness(offenseAwareness);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getPassing method, of class HockeyPlayer.
-     */
     @Test
     public void testGetPassing() {
-        System.out.println("getPassing");
-        String expResult = null;
-        String result = novoHockeyPlayer.getPassing();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setPassing("bom");
+        assertEquals("bom", novoHockeyPlayer.getPassing());
     }
 
-    /**
-     * Test of setPassing method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetPassing() {
-        System.out.println("setPassing");
-        String passing = "null";
-        novoHockeyPlayer.setPassing(passing);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getPotential method, of class HockeyPlayer.
-     */
     @Test
     public void testGetPotential() {
-        System.out.println("getPotential");
-        String expResult = null;
-        String result = novoHockeyPlayer.getPotential();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setPotential("bom");
+        assertEquals("bom", novoHockeyPlayer.getPotential());
     }
 
-    /**
-     * Test of setPotential method, of class HockeyPlayer.
-     */
-    @Test
-    public void testSetPotential() {
-        System.out.println("setPotential");
-        String potential = "null";
-        novoHockeyPlayer.setPotential(potential);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of getPuckControl method, of class HockeyPlayer.
-     */
     @Test
     public void testGetPuckControl() {
-        System.out.println("getPuckControl");
-        String expResult = null;
-        String result = novoHockeyPlayer.getPuckControl();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer.setPuckControl("bom");
+        assertEquals("bom", novoHockeyPlayer.getPuckControl());
     }
 
     /**

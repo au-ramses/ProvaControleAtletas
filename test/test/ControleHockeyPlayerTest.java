@@ -5,12 +5,8 @@
 package test;
 
 import controller.ControleHockeyPlayer;
-import java.util.ArrayList;
 import model.HockeyPlayer;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,59 +18,36 @@ public class ControleHockeyPlayerTest {
     
     public ControleHockeyPlayerTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+    private ControleHockeyPlayer controleHockeyPlayer;
+    private HockeyPlayer novoHockeyPlayer;
     @Before
-    public void setUp() {
+    public void setUp() throws Exception{
+        controleHockeyPlayer = new ControleHockeyPlayer();
+        novoHockeyPlayer = new HockeyPlayer("Ramses");
+        controleHockeyPlayer.adicionarHockeyPlayer(novoHockeyPlayer);
     }
     
-    @After
-    public void tearDown() {
+    @Test
+    public void testGetListaHockeyPlayers() {
+        assertNotNull(controleHockeyPlayer.getListaHockeyPlayers());
     }
 
-    
-    /**
-     * Test of adicionarHockeyPlayer method, of class ControleHockeyPlayer.
-     */
     @Test
     public void testAdicionarHockeyPlayer() {
-        System.out.println("adicionarHockeyPlayer");
-        HockeyPlayer novoHockeyPlayer = null;
-        ControleHockeyPlayer instance = new ControleHockeyPlayer();
-        instance.adicionarHockeyPlayer(novoHockeyPlayer);
-        // TODO review the generated test code and remove the default call to fail.
+        novoHockeyPlayer = new HockeyPlayer("Lucas");
+        controleHockeyPlayer.adicionarHockeyPlayer(novoHockeyPlayer);
+        assertEquals(novoHockeyPlayer, controleHockeyPlayer.pesquisarUmHockeyPlayer("Lucas"));
     }
 
-    /**
-     * Test of removerHockeyPlayer method, of class ControleHockeyPlayer.
-     */
     @Test
     public void testRemoverHockeyPlayer() {
-        System.out.println("removerHockeyPlayer");
-        HockeyPlayer hockeyPlayer = null;
-        ControleHockeyPlayer instance = new ControleHockeyPlayer();
-        instance.removerHockeyPlayer(hockeyPlayer);
-        // TODO review the generated test code and remove the default call to fail.
+        controleHockeyPlayer.removerHockeyPlayer(novoHockeyPlayer);
+        assertNull(controleHockeyPlayer.pesquisarUmHockeyPlayer("Ramses"));
     }
 
-    /**
-     * Test of pesquisarUmHockeyPlayer method, of class ControleHockeyPlayer.
-     */
     @Test
     public void testPesquisarUmHockeyPlayer() {
-        System.out.println("pesquisarUmHockeyPlayer");
-        String nome = "";
-        ControleHockeyPlayer instance = new ControleHockeyPlayer();
-        HockeyPlayer expResult = null;
-        HockeyPlayer result = instance.pesquisarUmHockeyPlayer(nome);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        controleHockeyPlayer.pesquisarUmHockeyPlayer("Ramses");
+        assertEquals(novoHockeyPlayer, controleHockeyPlayer.pesquisarUmHockeyPlayer("Ramses"));
     }
 }
